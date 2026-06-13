@@ -1,0 +1,41 @@
+
+services:
+  # 1. Nginx 网关服务（新增）
+  nginx-gateway:
+    image: nginx:alpine
+    container_name: nginx_gateway
+    ports:
+      - "80:80"  # 仅对外公开暴露 80 端口
+    volumes:
+      # 将宿主机的配置文件挂载到容器内的默认配置路径
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - streamlit-frontend
+      - fastapi-backend
+
+  # 2. FastAPI 后端服务
+  fastapi-backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fastapi_backend_app
+    volumes:
+      - .:/workspace
+      - ./model_data:/workspace/model_data
+      - ./logs:/workspace/logs
+    # 覆盖默认命令，启动 FastAPI
+    # 请根据您实际的 fastapi 入口文件路径调整（例如 main:app 或 app.main:app）
+    command: uvicorn main:app --reload --host 0.0.0.0 --port 8000
+
+  # 3. Streamlit 前端服务
+  streamlit-frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: streamlit_frontend_app
+    volumes:
+      - .:/workspace
+    # 启动 Streamlit
+    command: streamlit run streamlit_Pre.py --server.address=0.0.0.0 --server.port=8501
+    depends_on:
+      - fastapi-backend
