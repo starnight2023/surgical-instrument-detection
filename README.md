@@ -6,14 +6,9 @@
 
 ## 检测类别
 
-| 类别（英文） | 中文名称 |
-| --- | --- |
-| Grasper | 抓钳 |
-| Bipolar | 双极电凝钳 |
-| Hook | 电钩 |
-| Scissors | 剪刀 |
-| Clipper | 施夹钳 |
-| Irrigator | 冲洗器 |
+![手术器械](SurgicalInstruments.jpg)
+
+本系统识别六类常见手术器械：**Grasper**、**Bipolar**、**Hook**、**Scissors**、**Clipper**、**Irrigator**。
 
 ## 系统架构
 
