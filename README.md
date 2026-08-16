@@ -6,7 +6,7 @@
 
 ## 检测类别
 
-![手术器械](SurgicalInstruments.jpg)
+![手术器械](SurgicalInstruments.png)
 
 本系统识别六类常见手术器械：**Grasper**、**Bipolar**、**Hook**、**Scissors**、**Clipper**、**Irrigator**。
 
