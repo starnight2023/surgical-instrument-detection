@@ -23,7 +23,7 @@
 | Parameters (M) | 61.55 | **12.40** |
 | FLOPs (G) | 66.17 | **7.44** |
 
-测试条件：以上指标在 NVIDIA Quadro RTX 5000 上以 416×416 输入分辨率测得。
+测试条件：以上指标基于 m2cai16-tool-locations（M2CAI16 工具定位公开数据集）测试，在 NVIDIA Quadro RTX 5000 上以 416×416 输入分辨率测得。
 
 ## 系统架构
 
