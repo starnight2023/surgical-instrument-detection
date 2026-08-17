@@ -21,18 +21,12 @@
 
 ## 系统架构
 
-```
-                         ┌─────────────────────┐
-     http://localhost:80 │       Nginx         │
-       浏览器 ──────────▶ │   (nginx-gateway)   │
-                         └─────┬─────────┬─────┘
-                     / (WebSocket) │         │ /docs、/openapi.json
-                                   ▼         ▼
-                    ┌─────────────────┐  ┌──────────────────┐
-                    │  Streamlit 前端  │  │   FastAPI 后端    │
-                    │      :8501      │─▶│      :8000       │
-                    │  上传图片 / 画框  │  │  加载模型 / 推理   │
-                    └─────────────────┘  └──────────────────┘
+```mermaid
+flowchart LR
+    Browser[浏览器] -->|80 端口| Gateway[Nginx 网关]
+    Gateway -->|/ 与 WebSocket| Frontend[Streamlit 前端]
+    Gateway -->|/docs| Backend[FastAPI 后端]
+    Frontend -->|POST /predict| Backend
 ```
 
 - **Nginx**（80 端口）：统一网关，代理前端页面与后端 API 文档，并转发 Streamlit 所需的 WebSocket。
