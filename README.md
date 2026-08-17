@@ -155,3 +155,7 @@ streamlit run streamlit_Pre.py
 - **前端**：Streamlit
 - **部署**：Docker、Docker Compose、Nginx
 - **图像处理**：OpenCV、Pillow
+
+## 许可证
+
+本项目采用 [MIT License](LICENSE)。
