@@ -51,9 +51,9 @@ flowchart LR
 ├── yolo.py              # YOLO 模型封装（加载权重、预处理、推理）
 ├── nets/                # 网络结构定义（YoloBody、MobileNetV3 主干）
 ├── utils/               # 工具函数（解码、NMS、图像预处理等）
-├── model_data/          # 类别文件、先验框 anchors、字体
+├── model_data/          # 类别文件、先验框 anchors
 ├── sample_image/        # 前端示例图片
-└── logs/                # 训练好的模型权重（需自行放置，未入库）
+└── logs/                # 训练好的模型权重（需自行放置，未入库，字体同理）
 ```
 
 ## 快速开始（Docker 部署）
