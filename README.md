@@ -6,11 +6,13 @@
 
 ## 检测类别
 
+本系统识别六类常见手术器械：scissors、hook、irrigator、clipper、grasper、bipolar、specimen bag。
+
 <p align="center">
   <img src="surgical_instruments.png" alt="手术器械" width="467" />
 </p>
 
-<p align="center">本系统识别六类常见手术器械：<b>Grasper</b>、<b>Bipolar</b>、<b>Hook</b>、<b>Scissors</b>、<b>Clipper</b>、<b>Irrigator</b>。</p>
+
 
 ## 算法特点
 
