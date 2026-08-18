@@ -4,6 +4,10 @@
 
 上传手术图片后，系统自动识别并框出常见手术器械，标注类别与置信度，可用于手术场景的器械实时识别与计数，并为手术报告的自动生成提供结构化的器械信息。
 
+## 在线演示
+
+系统已部署在云服务器，[**点击在线检测**](http://119.29.191.104/#28493272)
+
 ## 检测类别
 
 本系统识别七类常见手术器械：scissor、hook、irrigator、clipper、grasper、bipolar、specimen bag。
@@ -11,8 +15,6 @@
 <p align="center">
   <img src="surgical_instruments.png" alt="手术器械" width="467" />
 </p>
-
-
 
 ## 算法特点
 
