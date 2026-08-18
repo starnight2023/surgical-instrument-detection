@@ -62,15 +62,7 @@ flowchart LR
 
 ### 1. 准备模型权重
 
-> ⚠️ 仓库中不包含训练好的权重文件，请先将权重放到 `logs/` 目录下。
-
-`yolo.py` 中默认加载的权重路径为：
-
-```
-logs/ep290-loss0.040-val_loss0.030.pth
-```
-
-如权重文件名不同，请同步修改 [yolo.py](yolo.py) 中 `_defaults` 的 `model_path` 配置。
+请注意仓库中不包含训练好的权重文件，请先将权重放到 `logs/` 目录下。
 
 ### 2. 一键启动
 
@@ -132,17 +124,6 @@ streamlit run streamlit_Pre.py
 ```
 
 > 📌 注意：`streamlit_Pre.py` 中的 `API_URL` 默认为 `http://fastapi-backend:8000/predict`（Docker 容器网络内的服务名）。本地直接运行时，请将其改为 `http://localhost:8000/predict`。
-
-## 配置说明
-
-| 配置项 | 位置 | 说明 |
-| --- | --- | --- |
-| `model_path` | `yolo.py` | 模型权重路径 |
-| `classes_path` | `yolo.py` | 类别文件路径（`model_data/instrument_class.txt`） |
-| `confidence` | `yolo.py` | 后端保留预测框的置信度阈值（默认 0.5） |
-| `cuda` | `yolo.py` | 是否使用 GPU（默认 `False`，有 NVIDIA GPU 可改为 `True`） |
-| `CONF_THRESHOLD` | `streamlit_Pre.py` | 前端展示结果的过滤阈值（默认 0.15） |
-| pip 镜像源 | `Dockerfile` | 默认腾讯云镜像，中国大陆构建慢时也可换用注释中的清华源 |
 
 ## 常见问题
 
