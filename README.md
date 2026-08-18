@@ -1,16 +1,17 @@
 # 手术器械检测系统（Surgical Instrument Detection）
 
-基于 **YOLOv3 + MobileNetV3** 的腹腔镜手术器械检测系统，采用 **FastAPI + Streamlit + Nginx** 前后端分离架构，支持 Docker 一键部署。
+基于 **YOLOv3 + MobileNetV3** 的腹腔镜胆囊切除术场景下的手术器械检测系统，采用 **FastAPI + Streamlit + Nginx** 前后端分离架构，支持 Docker 一键部署。
 
 上传手术图片后，系统自动识别并框出常见手术器械，标注类别与置信度，可用于手术场景的器械实时识别与计数，并为手术报告的自动生成提供结构化的器械信息。
 
 ## 在线演示
 
-系统已部署在云服务器，[**点击在线检测**](http://119.29.191.104/#28493272)
+系统已部署在云服务器，[**点击在线检测**](http://119.29.191.104/)
+网页提供两种检测方式：上传腹腔镜胆囊切除术手术图片，或从系统内置的示例图片中选择一张进行检测。
 
 ## 检测类别
 
-本系统识别七类常见手术器械：scissor、hook、irrigator、clipper、grasper、bipolar、specimen bag。
+本系统识别腹腔镜胆囊切除术场景下的七类常见手术器械：scissor、hook、irrigator、clipper、grasper、bipolar、specimen bag。
 
 <p align="center">
   <img src="surgical_instruments.png" alt="手术器械" width="467" />
